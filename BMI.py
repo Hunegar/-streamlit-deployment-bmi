@@ -15,12 +15,18 @@ def calculate_bmi():
     level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk']
     if bmi <= bmi_thresholds[0]:
         level = level_labels[0]
+        st.error(f"Your BMI is {bmi}. You are at {level}")
     elif bmi <= bmi_thresholds[1]:
         level = level_labels[1]
+        st.success(f"Your BMI is {bmi}. You are at {level}")
     elif bmi <= bmi_thresholds[2]:
         level = level_labels[2]
+        st.success(f"Your BMI is {bmi}. You are at {level}")
     else:
         level = level_labels[3]
+        st.error(f"Your BMI is {bmi}. You are at {level}")
+
+   
     st.success(f"Your BMI is {bmi}. You are at {level}")
     
 button = st.button("Calculate BMI")
