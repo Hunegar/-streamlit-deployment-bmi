@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+r#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Tue Mar  7 14:16:50 2023
@@ -32,10 +32,10 @@ def calculate_bmi():
 counter = 2
 while counter == 2:
     if height > 2.7 or height < 0.55:
-        st.success("Height is not human!")
+        st.error("Height is not human!")
         counter = counter - 1
     elif weight < 20 or weight > 200:
-        st.success("Weight is not human!")
+        st.error("Weight is not human!")
         counter = counter - 1
         break
     else:
