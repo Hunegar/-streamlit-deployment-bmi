@@ -30,7 +30,7 @@ def calculate_bmi():
     st.success(f"Your BMI is {bmi}. You are at {level}")
 
 counter = 2
-while check == 2:
+while counter == 2:
     if height > 2.7 or height < 0.55:
         st.success("Height is not human!")
         counter = counter - 1
