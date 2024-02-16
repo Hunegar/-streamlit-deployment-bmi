@@ -29,17 +29,17 @@ def calculate_bmi():
         level = level_labels[3]
     st.success(f"Your BMI is {bmi}. You are at {level}")
 
-check = True
-while check == True:
+counter = 2
+while check == 2:
     if height > 2.7 or height < 0.55:
         st.success("Height is not human!")
-        check = False
-        break
+        counter = counter - 1
     elif weight < 20 or weight > 200:
         st.success("Weight is not human!")
-        check = False
+        counter = counter - 1
         break
     else:
+        counter = 2
         calculate_bmi(weight,height)
         button = st.button("Calculate BMI")
         if button:
