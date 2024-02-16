@@ -27,7 +27,7 @@ def calculate_bmi():
         level = level_labels[2]
     else:
         level = level_labels[3]
-    st.success(f"Your BMI is {bmi}. You are at {level}")
+    st. success(f"Your BMI is {bmi}. You are at {level}")
 
 counter = 2
 while counter == 2:
